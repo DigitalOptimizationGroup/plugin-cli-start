@@ -1,0 +1,71 @@
+{
+  "name": "@digitaloptgroup/plugin-start",
+  "description": "A development server to run you ADN app locally.",
+  "version": "0.0.1-devpreview-12",
+  "author": "Digital Optimization Group LLC",
+  "bugs": "https://github.com/DigitalOptGroup/cli-plugin-start/issues",
+  "dependencies": {
+    "@dollarshaveclub/cloudworker": "0.0.11",
+    "@oclif/command": "^1.5.14",
+    "@oclif/config": "^1",
+    "@types/uuid": "^3.4.4",
+    "cli-ux": "^5.2.1",
+    "cookie": "^0.4.0",
+    "log-symbols": "^3.0.0",
+    "memory-fs": "^0.4.1",
+    "portfinder": "^1.0.20",
+    "querystring": "^0.2.0",
+    "uuid": "^3.3.2",
+    "webpack": "^4.34.0"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "@oclif/plugin-help": "^2",
+    "@oclif/test": "^1",
+    "@oclif/tslint": "^3",
+    "@types/chai": "^4",
+    "@types/mocha": "^5",
+    "@types/node": "^10",
+    "chai": "^4",
+    "globby": "^8",
+    "mocha": "^5",
+    "nyc": "^13",
+    "ts-loader": "^6.0.2",
+    "ts-node": "^8",
+    "tslib": "^1.10.0",
+    "tslint": "^5",
+    "typescript": "^3.3",
+    "webpack-cli": "^3.3.4"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/yarn.lock",
+    "/scripts"
+  ],
+  "homepage": "https://github.com/DigitalOptGroup/cli-plugin-start",
+  "keywords": [
+    "oclif-plugin"
+  ],
+  "license": "MIT",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "oclif-example",
+    "devPlugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "DigitalOptGroup/cli-plugin-start",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "tslint -p test -t stylish",
+    "prepack": "npm run webpack && rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme && mv lib/src/* lib/ && rm -d lib/src",
+    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif-dev readme && git add README.md",
+    "webpack": "webpack"
+  }
+}
