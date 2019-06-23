@@ -15,6 +15,17 @@ import { askForScriptPath } from "../ask-for-script-path";
 export default class Start extends Command {
   static description = `run a local server for development`;
 
+  static examples = [
+    `$ dog start
+
+# Start on a custom port
+$ dog start --port 3001
+
+# Point to a non-standard script location
+$ dog start --script ./my-script.js
+`
+  ];
+
   public static flags = {
     port: flags.integer({
       char: "p"

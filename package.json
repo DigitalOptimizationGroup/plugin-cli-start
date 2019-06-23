@@ -1,7 +1,7 @@
 {
   "name": "@digitaloptgroup/plugin-start",
   "description": "A development server to run you ADN app locally.",
-  "version": "0.0.1-devpreview-12",
+  "version": "0.0.1-devpreview-14",
   "author": "Digital Optimization Group LLC",
   "bugs": "https://github.com/DigitalOptGroup/cli-plugin-start/issues",
   "dependencies": {
@@ -54,7 +54,7 @@
   "license": "MIT",
   "oclif": {
     "commands": "./lib/commands",
-    "bin": "oclif-example",
+    "bin": "plugin-dogcli-start",
     "devPlugins": [
       "@oclif/plugin-help"
     ]

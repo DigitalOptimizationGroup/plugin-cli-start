@@ -6,8 +6,6 @@ const uuid = require("uuid");
 const cookie = require("cookie");
 const querystring = require("querystring");
 
-console.log("ITS THE NEW ONE");
-
 const argsToString = (args: Args) => {
   return Object.keys(args)
     .map(key => `${key}_${args[key]}`)

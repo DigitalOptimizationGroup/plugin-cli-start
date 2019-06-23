@@ -1,5 +1,4 @@
-@digitaloptgroup/cli-dev-server-plugin
-======================================
+# @digitaloptgroup/cli-dev-server-plugin
 
 A development server to run you ADN app locally.
 
@@ -9,39 +8,57 @@ A development server to run you ADN app locally.
 [![License](https://img.shields.io/npm/l/@digitaloptgroup/cli-dev-server-plugin.svg)](https://github.com/DigitalOptGroup/cli-dev-server-plugin/blob/master/package.json)
 
 <!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
-<!-- tocstop -->
+
+- [Usage](#usage)
+- [Commands](#commands)
+  <!-- tocstop -->
+
 # Usage
+
 <!-- usage -->
+
 ```sh-session
 $ npm install -g @digitaloptgroup/plugin-start
-$ oclif-example COMMAND
+$ plugin-dogcli-start COMMAND
 running command...
-$ oclif-example (-v|--version|version)
-@digitaloptgroup/plugin-start/0.0.1-devpreview-12 linux-x64 node-v10.14.2
-$ oclif-example --help [COMMAND]
+$ plugin-dogcli-start (-v|--version|version)
+@digitaloptgroup/plugin-start/0.0.1-devpreview-14 linux-x64 node-v10.14.2
+$ plugin-dogcli-start --help [COMMAND]
 USAGE
-  $ oclif-example COMMAND
+  $ plugin-dogcli-start COMMAND
 ...
 ```
-<!-- usagestop -->
-# Commands
-<!-- commands -->
-* [`oclif-example start`](#oclif-example-start)
 
-## `oclif-example start`
+<!-- usagestop -->
+
+# Commands
+
+<!-- commands -->
+
+- [`plugin-dogcli-start start`](#plugin-dogcli-start-start)
+
+## `plugin-dogcli-start start`
 
 run a local server for development
 
 ```
 USAGE
-  $ oclif-example start
+  $ plugin-dogcli-start start
 
 OPTIONS
   -p, --port=port
   -s, --script=script
+
+EXAMPLE
+  $ dog start
+
+  # Start on a custom port
+  $ dog start --port 3001
+
+  # Point to a non-standard script location
+  $ dog start --script ./my-script.js
 ```
 
-_See code: [src/commands/start.ts](https://github.com/DigitalOptGroup/cli-plugin-start/blob/v0.0.1-devpreview-12/src/commands/start.ts)_
+_See code: [src/commands/start.ts](https://github.com/DigitalOptGroup/cli-plugin-start/blob/v0.0.1-devpreview-14/src/commands/start.ts)_
+
 <!-- commandsstop -->
